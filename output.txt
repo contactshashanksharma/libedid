@@ -1,0 +1,195 @@
+
+##############################
+####### EDID Main block ######
+##############################
+Product details:
+Vendor(GSM), Product code(30470), Serial no(699402)
+No color depth(0) specified by monitor
+EDID output formats:
+RGB(1) YCBCR444(1) YCBCR422(0), YCBCR420(0)
+EDID output colorspace SRGB is default: No
+EDID features standby(1) suspend(1) active off(1)
+EDID gamma 2.000000
+
+DTD Modes in base blk:
+
+Detailed mode: 3840x2160 clock:594000 Khz
+3D:No Interlaced:No
+HA:3840 HBL:560 HFP:176 HSYNC:88 HSZ:600 HB:0
+VA:2160 VBL:90 VFP:10 VSYNC:10 VSZ:340 VB:0
+
+Detailed mode: 3840x2160 clock:297000 Khz
+3D:No Interlaced:No
+HA:3840 HBL:560 HFP:176 HSYNC:88 HSZ:600 HB:0
+VA:2160 VBL:90 VFP:10 VSYNC:10 VSZ:340 VB:0
+
+Found 1 CEA extension blocks in EDID
+
+##############################
+##### CEA Exension block #####
+##############################
+Basic information of CEA extn block: d 68 underscan No audio Yes
+ycbcr444 Yes 422 Yes dtd blocks 1
+CEA data block collection size = 64 bytes
+
+================================
+CEA DATA BLOCK (1) Type: Video
+Bytes 4 - 17 (13 bytes + tag)
+=================================
+Parsing video block, dblen 13
+VIC 16 is native mode
+Setting VIC 16 as vic[0][16]
+Setting VIC 34 as vic[0][34]
+Setting VIC 32 as vic[0][32]
+Setting VIC 31 as vic[0][31]
+Setting VIC 18 as vic[0][18]
+Setting VIC 3 as vic[0][3]
+Setting VIC 4 as vic[0][4]
+Setting VIC 1 as vic[0][1]
+Setting VIC 97 as vic[1][33]
+Setting VIC 96 as vic[1][32]
+Setting VIC 93 as vic[1][29]
+Setting VIC 94 as vic[1][30]
+Setting VIC 95 as vic[1][31]
+
+================================
+CEA DATA BLOCK (2) Type: Audio
+Bytes 18 - 21 (3 bytes + tag)
+=================================
+Audio block parsing is not yet supported
+
+================================
+CEA DATA BLOCK (3) Type: Vendor
+Bytes 22 - 35 (13 bytes + tag)
+=================================
+HDMI-VSDB: Phy: 1.0.0.0
+HDMI-VSDB: Max TMDS clock:300 Mhz, AI:Yes DVI Dual:No
+Deep color 16BPC:No 12BPC:Yes 10BPC:Yes
+
+================================
+CEA DATA BLOCK (4) Type: Vendor
+Bytes 36 - 43 (7 bytes + tag)
+=================================
+HF-VSDB: Max TMDS clock:600 Mhz, SCDC:Yes Scrambling at lower clocks:No
+4:2:0 deep color 16 BPC:No 12 BPC:Yes 10 BPC:Yes
+
+================================
+CEA DATA BLOCK (5) Type: Extended
+Bytes 44 - 47 (3 bytes + tag)
+=================================
+CEA Extended DATA BLOCK Type: YCBCR 4:2:0 Capability Map Data Block 
+Found desired data block in CEA EXT (1)
+Setting VIC 97 as vic[1][33]
+VIC 97(index 8) is 420_also mode
+Setting VIC 96 as vic[1][32]
+VIC 96(index 9) is 420_also mode
+Found total 2 YCBCR420_also modes
+
+================================
+CEA DATA BLOCK (6) Type: Vendor
+Bytes 48 - 56 (8 bytes + tag)
+=================================
+Found VSDB, len 8, vendor oui 0x1a data 5
+
+================================
+CEA DATA BLOCK (7) Type: Extended
+Bytes 57 - 60 (3 bytes + tag)
+=================================
+CEA Extended DATA BLOCK Type: Colorimetry Data Block 
+Colorimetry values: BT2020 RGB:1 YCC 1 CYCC 0
+opRGB 0, opYCC 0 sYCC 0 xvYCC_709 0 xvYCC_601 0
+
+================================
+CEA DATA BLOCK (8) Type: Extended
+Bytes 61 - 67 (6 bytes + tag)
+=================================
+CEA Extended DATA BLOCK Type: HDR Static Metadata Data Block 
+Static HDR metadata block: 5 bytes
+Gamma: SDR:Yes HDR:No ST2084:Yes HLG:No
+Luminance(cd/m2): Max:200 Min:200 FAV:0
+
+================================
+Found 1 DTD modes
+
+Detailed mode: 1920x1080 clock:148500 Khz
+3D:No Interlaced:No
+HA:1920 HBL:280 HFP:88 HSYNC:44 HSZ:600 HB:0
+VA:1080 VBL:45 VFP:5 VSYNC:5 VSZ:340 VB:0
+================================
+
+##############################
+####### EDID Main block ######
+##############################
+Product details:
+Vendor(DEL), Product code(41148), Serial no(842093141)
+No color depth(0) specified by monitor
+EDID output formats:
+RGB(1) YCBCR444(1) YCBCR422(0), YCBCR420(0)
+EDID output colorspace SRGB is default: No
+EDID features standby(1) suspend(1) active off(1)
+EDID gamma 2.000000
+
+DTD Modes in base blk:
+
+Detailed mode: 1920x1200 clock:154000 Khz
+3D:No Interlaced:No
+HA:1920 HBL:160 HFP:48 HSYNC:32 HSZ:518 HB:0
+VA:1200 VBL:35 VFP:6 VSYNC:6 VSZ:324 VB:0
+
+Found 1 CEA extension blocks in EDID
+
+##############################
+##### CEA Exension block #####
+##############################
+Basic information of CEA extn block: d 34 underscan Yes audio Yes
+ycbcr444 Yes 422 Yes dtd blocks 1
+CEA data block collection size = 30 bytes
+
+================================
+CEA DATA BLOCK (1) Type: Video
+Bytes 4 - 19 (15 bytes + tag)
+=================================
+Parsing video block, dblen 15
+VIC 16 is native mode
+Setting VIC 16 as vic[0][16]
+Setting VIC 5 as vic[0][5]
+Setting VIC 4 as vic[0][4]
+Setting VIC 3 as vic[0][3]
+Setting VIC 2 as vic[0][2]
+Setting VIC 7 as vic[0][7]
+Setting VIC 22 as vic[0][22]
+Setting VIC 1 as vic[0][1]
+Setting VIC 20 as vic[0][20]
+Setting VIC 31 as vic[0][31]
+Setting VIC 18 as vic[0][18]
+Setting VIC 19 as vic[0][19]
+Setting VIC 32 as vic[0][32]
+Setting VIC 33 as vic[0][33]
+Setting VIC 34 as vic[0][34]
+
+================================
+CEA DATA BLOCK (2) Type: Audio
+Bytes 20 - 23 (3 bytes + tag)
+=================================
+Audio block parsing is not yet supported
+
+================================
+CEA DATA BLOCK (3) Type: Vendor
+Bytes 24 - 29 (5 bytes + tag)
+=================================
+HDMI-VSDB: Phy: 2.0.0.0
+
+================================
+CEA DATA BLOCK (4) Type: Speaker
+Bytes 30 - 33 (3 bytes + tag)
+=================================
+Speaker block parsing is not yet supported
+
+================================
+Found 1 DTD modes
+
+Detailed mode: 1920x1080 clock:148500 Khz
+3D:No Interlaced:No
+HA:1920 HBL:280 HFP:88 HSYNC:44 HSZ:518 HB:0
+VA:1080 VBL:45 VFP:5 VSYNC:5 VSZ:324 VB:0
+================================
