@@ -160,13 +160,13 @@ struct cea_dynamic_hdr_md {
 struct cea_static_hdr_md {
 
         /* This is the content’s absolute peak luminance */
-        u_int16_t content_max_lum;
+        float content_max_lum;
 
         /* This is the content’s max frame-average luminance */
-        u_int16_t content_min_lum;
+        float content_fav_lum;
 
         /* This is the minimum value of the content luminance */
-        u_int16_t content_fav_lum;
+        float content_min_lum;
 
         /* EOTF: Traditional gamma SDR curve */
         u_int8_t gamma_sdr;

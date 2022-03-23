@@ -154,7 +154,6 @@
 
 /* Logs */
 #define edid_error printf
-
 #if VERBOSE
 #define edid_warn printf
 #define edid_debug printf
@@ -265,6 +264,7 @@ parse_cea_ext_extended_hdr_static_md_blk(struct edid_tags *etags, u_int8_t *db, 
         u_int8_t *hsdb = db;
         u_int8_t hsdbl = dblen;
         u_int8_t hdr_md;
+        float lum;
 
         if (hsdbl < 2) {
                 edid_warn("Invalid Static HDR MD DB len %d\n", hsdbl + 1);
@@ -282,22 +282,22 @@ parse_cea_ext_extended_hdr_static_md_blk(struct edid_tags *etags, u_int8_t *db, 
 
         /* Content luminance data */
         if (hsdbl >= 3) {
-                hdr_md = hsdb[2];
+                lum = hsdb[2];
                 /* Luminance value= 50 * 2 ^(CV/32) */
-                etags->hdr_smd.content_max_lum = 50 * pow(2, hdr_md/32);
+                etags->hdr_smd.content_max_lum = 50 * pow(2, lum/32);
         }
 
         if (hsdbl >= 4) {
-                hdr_md = hsdb[3];
+                lum = hsdb[3];
                 /* Luminance value= 50 * 2 ^(CV/32) */
-                etags->hdr_smd.content_min_lum = 50 * pow(2, hdr_md/32);
+                etags->hdr_smd.content_fav_lum = 50 * pow(2, lum/32);
         }
 
         if (hsdbl >= 5) {
-                hdr_md = hsdb[4];
+                lum = hsdb[4];
                 /* Desired Content Min Luminance = (Desired Content Max Luminance * (CV/255) 2 / 100) */
-                etags->hdr_smd.content_fav_lum = (etags->hdr_smd.content_max_lum *
-                                        pow(hdr_md/255, 2) / 100);
+                etags->hdr_smd.content_min_lum = (etags->hdr_smd.content_max_lum *
+                                        pow(lum/255, 2) / 100);
         }
 
         edid_debug("Static HDR metadata block: %d bytes\n", hsdbl);
@@ -306,7 +306,7 @@ parse_cea_ext_extended_hdr_static_md_blk(struct edid_tags *etags, u_int8_t *db, 
                 YESNO(etags->hdr_smd.gamma_hdr),
                 YESNO(etags->hdr_smd.gamma_st2084),
                 YESNO(etags->hdr_smd.gamma_hlg));
-        edid_debug("Luminance(cd/m2): Max:%d Min:%d FAV:%d\n",
+        edid_debug("Luminance(cd/m2): Max:%2f Min:%2f FAV:%2f\n",
                 etags->hdr_smd.content_max_lum,
                 etags->hdr_smd.content_min_lum,
                 etags->hdr_smd.content_fav_lum);
