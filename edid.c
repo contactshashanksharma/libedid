@@ -152,6 +152,36 @@
 /* Simple yes or no */
 #define YESNO(a) (a ? "Yes" : "No")
 
+static const char *cea_extended_tag_names[] = {
+        [CEA_DATA_BLOCK_EXT_VCDB ] = "Video Capability Data Block ",
+        [CEA_DATA_BLOCK_EXT_VSVDB] = "Vendor-Specific Video Data Block ",
+        [CEA_DATA_BLOCK_EXT_VDDDB] = "VESA Display Device Data Block ",
+        [CEA_DATA_BLOCK_EXT_VVTBE] = "VESA Video Timing Block Extension ",
+        [CEA_DATA_BLOCK_EXT_HDMI_VDB] = "Reserved for HDMI Video Data Block ",
+        [CEA_DATA_BLOCK_EXT_COLORIMETRY] = "Colorimetry Data Block ",
+        [CEA_DATA_BLOCK_EXT_HDR_STATIC_MD] = "HDR Static Metadata Data Block ",
+        [CEA_DATA_BLOCK_EXT_HDR_DYNAMIC_MD] = "HDR Dynamic Metadata Data Block ",
+        [CEA_DATA_BLOCK_EXT_VF_PREF ] = "Video Format Preference Data Block ",
+        [CEA_DATA_BLOCK_EXT_YCBCR420_VDB] = "YCBCR 4:2:0 Video Data Block ",
+        [CEA_DATA_BLOCK_EXT_YCBCR420_CMDB] = "YCBCR 4:2:0 Capability Map Data Block ",
+        [CEA_DATA_BLOCK_EXT_RES_MISC_AUD] = "Miscellaneous Audio Fields ",
+        [CEA_DATA_BLOCK_EXT_VSADB] = "Vendor-Specific Audio Data Block ",
+        [CEA_DATA_BLOCK_EXT_RES_HDMI_ADB] = "HDMI Audio Data Block ",
+        [CEA_DATA_BLOCK_EXT_RCDB] = "Room Configuration Data Block ",
+        [CEA_DATA_BLOCK_EXT_SPKR_LOC_DB] = "Speaker Location Data Block ",
+        [CEA_DATA_BLOCK_EXT_IFDB] = "InfoFrame Data Block ",
+};
+
+static const char *cea_db_names[] = {
+        [CEA_DATA_BLOCK_RESERVED] = "Reserved",
+        [CEA_DATA_BLOCK_AUDIO] = "Audio",
+        [CEA_DATA_BLOCK_VIDEO] = "Video",
+        [CEA_DATA_BLOCK_VENDOR] = "Vendor",
+        [CEA_DATA_BLOCK_SPEAKER_ALLOC] = "Speaker",
+        [CEA_DATA_BLOCK_VESA_DTC] = "VESA DTC",
+        [CEA_DATA_BLOCK_EXTENDED] = "Extended"
+};
+
 /* Logs */
 #define edid_error printf
 #if VERBOSE
