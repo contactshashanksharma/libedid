@@ -51,34 +51,31 @@ About EDID
  * └─────────────────────────────────────┘
  */
 
-
-struct edid_info {
-        u_int8_t *raw_edid;----------------------> Raw EDID 
-        struct edid_tags cea_blks; --------------> information about CEA Extension block video features and configuration (As per CEA-861-G spec)
-        struct edid_base_blk base_blk;-----------> information on first edid block (as per VESA E-EDID spec 1.4)
-};
-
 There is a lot of documentation provided along with the definitions of these structures, hope it will be self-explanatory.
 
 ===================
 How to use libedid:
 ===================
-There are only 2 APIs in this library:
-	- libedid_process_edid_info: Get EDID information from raw_edid, returns filled struct edid_info ptr
-	- libedid_destroy_edid_info: Free the EDID information
 
-There are 2 test files provided here, which explains the right usage of the APIs:
-1. test_libedid.c : Test libedid with hard-coded EDIDs
-2. test_libedid_drm.c: Test libedid with the EDID extracted from the DRM connectors of a card
+1. Parse EDID using function libedid_init() by passing raw EDID data;
+   This function rerutns a void ptr. Keep it safe.
+2. Check the available APIs in libedid-api.h, call any of those APIs with the returned pointer to
+   extract a specific information. For example, libedid_display_supports_hdr_output() will tell
+   if the display supports HDR.
+
+   Checkout the sample program (test-libedid-api.c) for example code and details.
+3. Free the memory using libedid_destroy() function when done with this display.
 
 =========
 Building
 =========
 
-make : Builds the library (libedid.so), and two test apps (test-libedid and test-libedid-drm)
+make : Builds the library (libedid.so), and test apps (test-libedid and test-libedid-drm)
 make lib: Builds only the library libedid.so
 make test: builds only the first test app (test_libedid)
 make test-drm: builds only the second test app (test_libedid_drm)
+make test-api: builds only the example test app, which demos the API usage (test-api)
+make verbose: build all of those above with debug prints and flags enabled
 
 ===========
 Debug logs
